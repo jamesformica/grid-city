@@ -1,12 +1,12 @@
 {
   "name": "thanos-fate",
-  "homepage": "http://jamesformica.github.io/spotify-turntable",
+  "homepage": "http://jamesformica.github.io/grid-city",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url /spotify-turntable",
+    "build": "parcel build index.html --public-url /grid-city",
     "lint": "yarn eslint .",
     "predeploy": "yarn lint && yarn build",
     "deploy": "yarn gh-pages -d dist"

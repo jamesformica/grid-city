@@ -1,0 +1,39 @@
+.normal {
+  border-radius: 100px;
+  background: lightgrey;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem 0.25rem;
+  font-size: 0.75rem;
+  border: 2px solid white;
+  outline: none;
+  cursor: pointer;
+}
+
+.active {
+  composes: normal;
+
+  &.rotate {
+    background: pink;
+  }
+
+  &.grass {
+    background: #94d583;
+  }
+
+  &.water {
+    background: #1693a5;
+  }
+
+  &.sand {
+    background: #F5F0D7;
+  }
+
+  &.road-straight,
+  &.road-corner {
+    background: gold;
+  }
+
+  &.house {
+    background: wheat;
+  }
+}

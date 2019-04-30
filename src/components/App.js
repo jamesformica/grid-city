@@ -1,22 +1,21 @@
-import React, { useReducer } from 'react'
+import React, { useState } from 'react'
 
-import Info from './Info'
-import Turntable from './Turntable'
-import Background from './Background'
-import useTrackFetcher from '../hooks/useTrackFetcher'
-import reducer from '../reducer'
+import Grid from './Grid'
+import Controls from './Controls'
+import styles from './App.css'
 
-const App = ({ auth }) => {
-  const [track, dispatch] = useReducer(reducer, {})
-
-  useTrackFetcher(track, auth, dispatch)
+const App = () => {
+  const [mode, setMode] = useState('grass')
+  const [rotation, setRotation] = useState(0)
 
   return (
-    <>
-      <Background track={track} />
-      <Info track={track} />
-      <Turntable track={track} dispatch={dispatch} />
-    </>
+    <div className={styles.wrapper}>
+      <p className={styles.tip}>
+        Tip: Use `shift + click` to rotate tiles quickly
+      </p>
+      <Controls mode={mode} setMode={setMode} />
+      <Grid mode={mode} rotation={rotation} setRotation={setRotation} />
+    </div>
   )
 }
 
